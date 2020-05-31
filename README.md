@@ -7,7 +7,7 @@ Basic idea:
 
 Given a scrambled picture with NxN tiles and removing one "cell" in the grid, reorder the tiles by moving the blank cell around the grid until the image has been unscrambled.
 
-To install:
+# To install:
 create and activate virtual environment
 ```sh
 $ virtualenv -p PYTHON3_PATH venv
