@@ -67,6 +67,8 @@ from scrambler_test import (ImageScrambleGame,
     - Movement from constant list in import above
 
 Image is considered unscrambled when all tiles (including the blank, of course) are in their correct place
+## Indexing order
+![Image of unscrambled image](scramble/16.png)
 
 # Objective
 - Your objective is to use any machine learning algorithm of your choosing to solve this problem for at least the 2x2 grid.
