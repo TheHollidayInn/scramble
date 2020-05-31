@@ -28,6 +28,7 @@ $ python
 >>> scrambler_test.demo()
 ```  
   - Click on tiles adjacent to the blank tile to move as in video below.
+[![Demo scrambler](demo/demo.gif)](demo/demo.gif)
 
 # Usage Instructions
   - from the scrambler test module import the ImageScrambleGame class and the movement constants
