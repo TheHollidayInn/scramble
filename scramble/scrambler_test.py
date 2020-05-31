@@ -11,7 +11,7 @@ MOVE_DOWN = 2
 MOVE_RIGHT = 3
 
 class ImageScrambleGame:
-	def __init__(self, gsize=4, img_path="16.png", seednum=0):
+	def __init__(self, gsize=4, img_path=os.path.join(curr_path, "16.png"), seednum=0):
 		image = cv2.imread(img_path)
 		self.parts = []
 		self.gsize = gsize
