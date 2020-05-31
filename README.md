@@ -48,6 +48,7 @@ from scrambler_test import (ImageScrambleGame,
         - gsize is the number of units for the width/height of the grid (gsize=4 makes a 4x4 grid for example)
         
         - seednum is used to seed the random generator to randomize the grid.  Using the same seednum will always result in the same shuffle
+Note: Some seednum values will leave to unsolvable scrambles.  In this case an exception is thrown during initialization the scramble class
 #### Use the object methods listed below to unshuffle the image
 - whitespot_idx()
      - gets index of blank (in 1d array indexing)
