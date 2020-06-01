@@ -7,7 +7,7 @@ Basic idea:
 
 Given a scrambled picture with NxN tiles and removing one "cell" in the grid, reorder the tiles by moving the blank cell around the grid until the image has been unscrambled.
 
-To install:
+# To install:
 create and activate virtual environment
 ```sh
 $ virtualenv -p PYTHON3_PATH venv
@@ -22,17 +22,18 @@ $ pip install git+https://github.com/tony7126/scramble.git
 ```sh
 $ python
 ```
-  - import scrambler test module and run demo function
+  - import scrambler module and run demo function
 ```sh
->>> import scrambler_test
->>> scrambler_test.demo()
+>>> import scramble
+>>> scramble.demo()
 ```  
   - Click on tiles adjacent to the blank tile to move as in video below.
+[![Demo scrambler](demo/demo.gif)](demo/demo.gif)
 
 # Usage Instructions
-  - from the scrambler test module import the ImageScrambleGame class and the movement constants
+  - from the scrambler module import the ImageScrambleGame class and the movement constants
 ```sh
-from scrambler_test import (ImageScrambleGame, 
+from scramble import (ImageScrambleGame, 
                             MOVE_UP,
                             MOVE_LEFT,
                             MOVE_DOWN,
@@ -47,6 +48,7 @@ from scrambler_test import (ImageScrambleGame,
         - gsize is the number of units for the width/height of the grid (gsize=4 makes a 4x4 grid for example)
         
         - seednum is used to seed the random generator to randomize the grid.  Using the same seednum will always result in the same shuffle
+Note: Some seednum values will leave to unsolvable scrambles.  In this case an exception is thrown during initialization the scramble class
 #### Use the object methods listed below to unshuffle the image
 - whitespot_idx()
      - gets index of blank (in 1d array indexing)
