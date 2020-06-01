@@ -24,11 +24,11 @@ class ImageScrambleGame:
 				self.parts.append([part_num, image[self.hs * y: self.hs * (y + 1),self.ws * x: self.ws * (x + 1)].copy(), False])
 
 		random.seed(seednum)
-		random.shuffle(self.parts)
-		whitespot_idx = random.randint(0, self.gsize**2-1)#random.choice([0, (self.gsize - 1), self.gsize * (self.gsize - 1), self.gsize**2-1])
-		
+		whitespot_idx = self.gsize**2-1#random.choice([self.gsize * (self.gsize - 1), self.gsize**2-1])#random.randint(0, self.gsize**2-1)#
 		part_to_remove = self.parts[whitespot_idx]
 		self.parts[whitespot_idx] = [part_to_remove[0], np.zeros(part_to_remove[1].shape, dtype=np.uint8), True]
+		random.shuffle(self.parts)
+		
 		if not self.solvability():
 			raise Exception("Unsolvable.  Try new seed.")
 		
