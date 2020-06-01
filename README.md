@@ -22,18 +22,18 @@ $ pip install git+https://github.com/tony7126/scramble.git
 ```sh
 $ python
 ```
-  - import scrambler test module and run demo function
+  - import scrambler module and run demo function
 ```sh
->>> import scrambler_test
->>> scrambler_test.demo()
+>>> import scramble
+>>> scramble.demo()
 ```  
   - Click on tiles adjacent to the blank tile to move as in video below.
 [![Demo scrambler](demo/demo.gif)](demo/demo.gif)
 
 # Usage Instructions
-  - from the scrambler test module import the ImageScrambleGame class and the movement constants
+  - from the scrambler module import the ImageScrambleGame class and the movement constants
 ```sh
-from scrambler_test import (ImageScrambleGame, 
+from scramble import (ImageScrambleGame, 
                             MOVE_UP,
                             MOVE_LEFT,
                             MOVE_DOWN,
